@@ -1,4 +1,3 @@
-# Taste-Bots
 
 Inline-style: 
 ![alt text](/Image/Rest1.jpg)

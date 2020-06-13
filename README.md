@@ -1,5 +1,7 @@
 # Taste-Bots
-Summarization of Indian Restaurant Reviews
+
+Inline-style: 
+![alt text](/Image/Rest1.jpg)
 
 Folder : Code
 	

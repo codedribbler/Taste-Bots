@@ -41,7 +41,13 @@ Our main interest in the dataset were the  name,review_list and rating.
 1. From the dataset few restaurant which had sufficient reviews were picked .
 2. The columns name and review_list were selected .
 3. The review from review list were cleaned using regex and other techniques .
-4. Finally the cleaned dataset was saved to an <a href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/Restaurant_Review.xlsx">Restaurant Review</a>. 
+4. Finally the cleaned dataset was saved to <a href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/Restaurant_Review.xlsx">Restaurant Review</a> excel file .
+
+
+#### Symspell
+Spelling error is omnipresent in reviews . So before further working in reviews it is important to first mitigate the mispellings as much as possible .
+To correct spellings a library called <a href="https://github.com/wolfgarbe/SymSpell">Symspell</a> . We have extended its functionality by including indian food and dish names in its dictionary so that it serves our purpose .
+
 
 
 

@@ -31,4 +31,12 @@ Taste Bots uses Natural Language Processing techniques on the Restaurnt reviews 
 4. [Topic modelling (For the recommended system)](#top2)
 
 
+### Getting the data
+The dataset used was <a href="https://www.kaggle.com/himanshupoddar/zomato-bangalore-restaurants">Zomato Bangalore Restaurants</a> .
+Our main interest in the dataset were the  name,review_list and rating.
+
+### Preprocessing
+#### Data Cleaning
+
+
 

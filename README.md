@@ -15,8 +15,11 @@ Taste Bots uses Natural Language Processing techniques on the Restaurnt reviews 
 1) Highlights most talked about features with its associated sentiment of a Restaurant.
 
 ![alt text](/Image/blog1.png)
+![alt text](/Image/blog3.png)
 
 2) Give reccomendations based on the reviews .
+
+![alt text](/Image/blog2.png)
 
 
 

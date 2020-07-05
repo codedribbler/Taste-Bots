@@ -27,7 +27,7 @@ Taste Bots uses Natural Language Processing techniques on the Restaurnt reviews 
       - Data cleaning.
       - Using symspell to correct spelling mistakes.
       - Lemmatization
-3. [Finding the most talked about features of a Restaurant and their sentiments .](#top1)  
+3. [Learning most talked about features of a Restaurant and their sentiments .](#top1)  
 4. [Topic modelling (For the recommended system)](#top2)
 
 
@@ -41,7 +41,7 @@ Our main interest in the dataset were the  name,review_list and rating.
 1. From the dataset few restaurant which had sufficient reviews were picked .
 2. The columns name and review_list were selected .
 3. The review from review list were cleaned using regex and other techniques .
-4. Finally the cleaned dataset was saved to <a href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/Restaurant_Review.xlsx">Restaurant Review</a> excel file .
+4. Finally the cleaned dataset was saved to <a name='rest_excel' href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/Restaurant_Review.xlsx">Restaurant Review</a> excel file .
 
 
 #### Symspell
@@ -50,6 +50,16 @@ To correct spellings a library called <a href="https://github.com/wolfgarbe/SymS
 
 #### Lemmatization
 Lemmatization involves resolving words to their dictionary form. In fact, a lemma of a word is its dictionary or canonical form. So words like loved, loving etc. will have thier lemmatized form as love.
+
+[The Restaurant Review excel](#rest_excel) contains the output after each review of restaurant is sanitized by passed it through symspell followed by lemmatization function. 
+
+
+### Learning most talked about features of a Restaurant and their sentiments
+
+One of the objecive of the project is to highlight the most noticed feature of a restaurant .
+Explain by example ...........
+
+To work this out 
 
 
 

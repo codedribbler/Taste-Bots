@@ -21,6 +21,14 @@ Taste Bots uses Natural Language Processing techniques on the Restaurnt reviews 
 
 ![alt text](/Image/blog2.png)
 
+### The process involves -:
+1. Getting the data
+2. Preprocessing the date which involves -:
+      - Data cleaning.
+      - Using symspell to correct spelling mistakes.
+      - Lemmatization
+3. Finding the most talked about features of a Restaurant and thier sentiments.
+4. Topic modelling .
 
 
 

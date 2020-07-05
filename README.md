@@ -17,7 +17,7 @@ Taste Bots uses Natural Language Processing techniques on the Restaurnt reviews 
 ![alt text](/Image/blog1.png)
 ![alt text](/Image/blog3.png)
 
-2) <a name="top2>Give reccomendations based on the reviews.</a>
+2) <a name="top2">Give reccomendations based on the reviews.</a>
 
 ![alt text](/Image/blog2.png)
 

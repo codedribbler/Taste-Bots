@@ -48,6 +48,11 @@ Our main interest in the dataset were the  name,review_list and rating.
 Spelling error is omnipresent in reviews . So before further working in reviews it is important to first mitigate the mispellings as much as possible .
 To correct spellings a library called <a href="https://github.com/wolfgarbe/SymSpell">Symspell</a> is used. We have extended its functionality by including indian food and dish names in its dictionary so that it serves our purpose .
 
+#### Lemmatization
+Lemmatization involves resolving words to their dictionary form. In fact, a lemma of a word is its dictionary or canonical form. So words like loved, loving etc. will have thier lemmatized form as love.
+
+
+
 
 
 

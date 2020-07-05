@@ -17,7 +17,7 @@ Taste Bots uses Natural Language Processing techniques on the Restaurnt reviews 
 ![alt text](/Image/blog1.png)
 ![alt text](/Image/blog3.png)
 
-2) Give reccomendations based on the reviews .
+2) <a name="top2>Give reccomendations based on the reviews.</a>
 
 ![alt text](/Image/blog2.png)
 
@@ -28,7 +28,7 @@ Taste Bots uses Natural Language Processing techniques on the Restaurnt reviews 
       - Using symspell to correct spelling mistakes.
       - Lemmatization
 3. [Finding the most talked about features of a Restaurant and their sentiments .](#top1)  
-4. Topic modelling .
+4. [Topic modelling (For the recommended system)](#top2)
 
 
 

@@ -12,7 +12,7 @@ But with heaps of reviews available it is impossible for people to read all the 
 
 Taste Bots uses Natural Language Processing techniques on the Restaurnt reviews and makes sense of them . The solutions are
 
-1) Highlights most talked about features with its associated sentiment of a Restaurant.
+1) <a name="top1">Highlights most talked about features with its associated sentiment of a Restaurant.</a>
 
 ![alt text](/Image/blog1.png)
 ![alt text](/Image/blog3.png)
@@ -27,7 +27,7 @@ Taste Bots uses Natural Language Processing techniques on the Restaurnt reviews 
       - Data cleaning.
       - Using symspell to correct spelling mistakes.
       - Lemmatization
-3. Finding the most talked about features of a Restaurant and thier sentiments.
+3. [Finding the most talked about features of a Restaurant and their sentiments .](#top1)  
 4. Topic modelling .
 
 

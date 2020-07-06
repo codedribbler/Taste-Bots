@@ -65,7 +65,18 @@ So in the file [The Restaurant Review excel](#rest_excel) we have data consistin
 
 **1. Splitting the reviews in sentences** - The reviews will be divided into sentences. This can just be done by splitting the reviews based on punctuations('.',','etc.) but punctuation mistakes are quiet common in reviews, so a library <a href="https://github.com/notAI-tech/deepsegment">DeepSegment</a> is used . DeepSegment has nice performance in Sentence segmentation or Sentence boundary Detection and it outperforms both Spacy and NLTK in this task .
 
-**1. Feature Extraction** - 
+**2. Feature Extraction** - Spacy is used for Feature Extraction . After a review is segmented, each sentence is parsed with spacy and using noun_chunks functionality of spacy the features are extracted, then if noun_chunks contains stop words like the,a etc. and this cycle goes for all the sentence of the review . In this way features mentioned in a particular review are collected . Then using a counter occurances of the features in the list would be counted . Features which are less than 0.05 times number of reviews will be dropped. In this way only frequently mentioned features are considered.
+
+All the reviews of a particular restaurant goes through the same process and the final feature list consists of all the features mentioned in reviews and using this process features of all the restaurant is collected in a dictionary.
+
+
+**4. Extracting Sentiments and Sentiment Score** - To find setiment of features, reviews of a restaurant will be iterated to find if the contain the feature mentioned corresponding to that restaurant in feature dictionary. If the feature is located in the review, using spacy dependency parsing, adjective which describes the feature is be searched around the feature. So a dictionary is created with features as its key and the adjective as its values .
+
+After the dictionary is created, the values of the dictionary i.e the adjectives are converted into sentiment score using AFINN .  The <a href="https://pypi.org/project/afinn/">AFINN</a> lexicon is perhaps one of the simplest and most popular lexicons that
+can be used extensively for sentiment analysis.
+
+This is done for all the restaurant and the final sentiments are saved in <a href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/sentiment_matrix.xlsx">Setiment Dataset</a>.
+
 
 
 

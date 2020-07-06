@@ -59,11 +59,13 @@ Lemmatization involves resolving words to their dictionary form. In fact, a lemm
 One of the objecive of the project is to highlight the most noticed feature of a restaurant .
 Explain by example ...........
 
-To work this out 
 
 
+So in the file [The Restaurant Review excel](#rest_excel) we have data consisting of different restaurants and thier reviews . So for each restaurant, reviews would be picked and following tasks would be performed on them -:
 
+**1. Splitting the reviews in sentences** - The reviews will be divided into sentences. This can just be done by splitting the reviews based on punctuations('.',','etc.) but punctuation mistakes are quiet common in reviews, so a library <a href="https://github.com/notAI-tech/deepsegment">DeepSegment</a> is used . DeepSegment has nice performance in Sentence segmentation or Sentence boundary Detection and it outperforms both Spacy and NLTK in this task .
 
+**1. Feature Extraction** - 
 
 
 

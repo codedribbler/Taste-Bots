@@ -75,8 +75,8 @@ All the reviews of a particular restaurant goes through the same process and the
 After the dictionary is created, the values of the dictionary i.e the adjectives are converted into sentiment score using AFINN .  The <a href="https://pypi.org/project/afinn/">AFINN</a> lexicon is perhaps one of the simplest and most popular lexicons that
 can be used extensively for sentiment analysis.
 
-This is done for all the restaurant and the final sentiments are saved in <a href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/sentiment_matrix.xlsx">Setiment Dataset</a>.
+This is done for all the restaurant and the final sentiments are saved in <a href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/sentiment_matrix.xlsx">Setiment Dataset</a> and this dataset is used to create [UI](#top1) which provide dashboard for restaurants.
 
 
 
-
+### Topic Modelling

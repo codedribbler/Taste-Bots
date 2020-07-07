@@ -36,19 +36,18 @@ The dataset used was <a href="https://www.kaggle.com/himanshupoddar/zomato-banga
 Our main interest in the dataset were the  name,review_list and rating.
 
 ### Preprocessing
-#### Data Cleaning
-
+**1.Data Cleaning**
 1. From the dataset few restaurant which had sufficient reviews were picked .
 2. The columns name and review_list were selected .
 3. The review from review list were cleaned using regex and other techniques .
 4. Finally the cleaned dataset was saved to <a name='rest_excel' href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/Restaurant_Review.xlsx">Restaurant Review</a> excel file .
 
 
-#### Symspell
+**2. Symspell**
 Spelling error is omnipresent in reviews . So before further working in reviews it is important to first mitigate the mispellings as much as possible .
 To correct spellings a library called <a href="https://github.com/wolfgarbe/SymSpell">Symspell</a> is used. We have extended its functionality by including indian food and dish names in its dictionary so that it serves our purpose .
 
-#### Lemmatization
+**3.Lemmatization**
 Lemmatization involves resolving words to their dictionary form. In fact, a lemma of a word is its dictionary or canonical form. So words like loved, loving etc. will have thier lemmatized form as love.
 
 [The Restaurant Review excel](#rest_excel) contains the output after each review of restaurant is sanitized by passed it through symspell followed by lemmatization function. 
@@ -80,3 +79,30 @@ This is done for all the restaurant and the final sentiments are saved in <a hre
 
 
 ### Topic Modelling
+
+<a href="https://en.wikipedia.org/wiki/Topic_model#:~:text=In%20machine%20learning%20and%20natural,structures%20in%20a%20text%20body.">Topic Modeling</a> is the process of identifying topics in a set of documents . In case of reviews topic modelling can be a handy utility which can find out around what topics the reviews are written . This can be leveraged to form recommended system which can -:
+
+a. [Give recommendation of Restaurants based on the Topics](#top2)
+b. [Give recommendation of restaurants similar ro a particular restaurant](#top2) 
+
+There are other utilities as well which are not part of the project, like -:
+
+a. Visually show to a restaurant owner what topics their positive and negative
+reviews reside in. This makes it clear if a restaurant needs to improve its service
+quality, or if its much more popular for its pizza than its bar.
+
+b. Take a mean of all the restaurants and create an \average restaurant" in par-
+ticular city or area. This will allow comparison of any restaurant against this
+calculated mean.
+
+
+The process for topic modelling is as follows -:
+
+
+**1. Get the data** - Same <a href="https://www.kaggle.com/himanshupoddar/zomato-bangalore-restaurants">Zomato Bangalore Restaurants</a> dataset is required . Fileter the reviews whose ratings are greater than 3 . Then clean the reviews using same process as in the previous section.
+
+**2. Tokenization** - Tokenization is a way of separating a piece of text into smaller units called tokens. Here, tokens can be either words, characters, or subwords. Here sentences are tokenized into words . Tokenization will create a list of words for each review . This way a 2d matrix is created where the row are the reviews and columns are the tokezed workds . 
+
+**3. Topic Modelling** -  
+
+

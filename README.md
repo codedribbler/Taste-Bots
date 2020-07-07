@@ -101,8 +101,35 @@ The process for topic modelling is as follows -:
 
 **1. Get the data** - Same <a href="https://www.kaggle.com/himanshupoddar/zomato-bangalore-restaurants">Zomato Bangalore Restaurants</a> dataset is required . Fileter the reviews whose ratings are greater than 3 . Then clean the reviews using same process as in the previous section.
 
-**2. Tokenization** - Tokenization is a way of separating a piece of text into smaller units called tokens. Here, tokens can be either words, characters, or subwords. Here sentences are tokenized into words . Tokenization will create a list of words for each review . This way a 2d matrix is created where the row are the reviews and columns are the tokezed workds . 
+**2. Tokenization** - Tokenization is a way of separating a piece of text into smaller units called tokens. Here, tokens can be either words, characters, or subwords. Here sentences are tokenized into words . Tokenization will create a list of words for each review . This way a 2d matrix is created where the row are the reviews and columns are the tokezed words . 
 
-**3. Topic Modelling** -  
+**3. Topic Modelling** - Two very popular approaches for topic modelling is used 
+a. <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent Dirichlet allocation(LDA)</a> . <a href="https://radimrehurek.com/gensim/">Gensim</a> library ca be leveraged for doing LDA .  
+b. <a href="https://en.wikipedia.org/wiki/Non-negative_matrix_factorization">Non-negative matrix factorization(NMF)</a> . It can be done using <a href="https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.NMF.html">sklearns NMF</a> 
+
+NMF gave more interpretable results and separable topics.
+--Photo of topcs
+
+The topics can be categorized as -:
+a. Biryani/order
+b. Mutton Biryani
+c. Ambience
+d. Service/Staff
+e. Buffet
+
+Each review will have the topic distribution which will indicate how much the review is inclined to topics, this will help to identify the topic to which a particular review is annotating to .
+
+For a restaurant the topic distribution of its reviews is averaged . This results in a vector which indicates the topic distribution of the restaurants .
+
+These topic distribution vectors are leveraged to create recommendation system . The recommendation system cuurently can do the following things -:
+
+1) Can give recommendation for restaurants known for **biryani, ambience or service** . For biryani the restaurants vector are sorted in descending order based on biryani score . Higher score restaurant will be recommended more . Similar process is followed fo ambience and service.
+
+2) Can give recommendation of **similar restaurants** based on the selected restaurant . For doing this, cosine similarity of the restaurant vectors is calculated with the selected restaurants vector and the scores are sorted in descending order . Higher similarity scores will be recommended more.
+
+
+
+
+
 
 

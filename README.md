@@ -137,7 +137,7 @@ These topic distribution vectors are leveraged to create recommendation system .
 
 1) Can give recommendation for restaurants known for **biryani, ambience or service** . For biryani the restaurants vector are sorted in descending order based on biryani score . Higher score restaurant will be recommended more . Similar process is followed fo ambience and service.
 
-2) Can give recommendation of **similar restaurants** based on the selected restaurant . For doing this, cosine similarity of the restaurant vectors is calculated with the selected restaurants vector and the scores are sorted in descending order . Higher similarity scores will be recommended more.
+2) Can give recommendation of **similar restaurants** based on the selected restaurant . For doing this, cosine similarity of the restaurant vectors is calculated with the selected restaurants vector and the scores are sorted in descending order . Higher similarity scores will be recommended more .
 
 
 

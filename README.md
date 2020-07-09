@@ -76,7 +76,11 @@ The dataset [The Restaurant Review excel](#rest_excel) consists of different res
 ![alt text](/Image/chunk.png)
 
 
-In this way features mentioned in a particular review are collected .This is repeated for all the reviews of a restaurant a collected in a list . Then using a counter occurances of the features in the list are counted . Features which are less than 0.05 times the number of reviews will be dropped. In this way only frequently mentioned features are considered.
+
+
+
+In this way features mentioned in a particular review are collected .This is repeated for all the reviews of a restaurant a collected in a list .Then using a counter occurances of the features in the list are counted . Features which are less than 0.05 times the number of reviews will be dropped. In this way only frequently mentioned features are considered.
+![alt text](/Image/count_chunk.png)
 
 All the reviews of a particular restaurant goes through the same process and the final feature list consists of all the features mentioned in reviews and using this process features of all the restaurant is collected in a dictionary.
 

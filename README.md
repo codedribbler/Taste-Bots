@@ -1,18 +1,17 @@
 
 ![alt text](/Image/alfredo.jpg)
 
-Review is a critical success metric for a lot of Business espically in Restaurant business where it has the power to drive its fate . 
+Customer reviews are a critical success metric for a lot of businesses espically in restaurant business where it has the power to drive its fate . 
 
-The Business team of a restaurant uses the reviews to gauge its performance and potential and on the other side of the table The Customers depend on the reviews, from deciding whether to visit a restaurant to what to expect .
+The business team of a restaurant uses the reviews to gauge performance and potential and on the other side of the table the customers depend on the reviews, from deciding whether to visit a restaurant to what to expect .
 
-There are a lot of amazing platforms which cater to this need , Zomato , Yelp ,Google etc. naming a few, which make it very easy for people to read and post reviews . Thus there are huge banks of reviews . 
+There are a lot of amazing platforms which cater to this need Zomato , Yelp ,Google etc. naming a few, which make it very easy for people to read and post reviews . Thus there are huge banks of reviews . 
 
-But with heaps of reviews available it is impossible for people to read all the reviews . This is where Taste Bots comes into the picture.
+But with heaps of reviews available it is impossible for people to read all the reviews. This is where Taste Bots comes into the picture.Taste Bots uses Natural Language Processing techniques on the Restaurnt reviews and makes sense of them . 
 
+The solutions Taste Bots provide are -:
 
-Taste Bots uses Natural Language Processing techniques on the Restaurnt reviews and makes sense of them . The solutions are
-
-1) <a name="top1">Highlights most talked about features with its associated sentiment of a Restaurant.</a>
+1) <a name="top1">Highlights most talked about features of a Restaurant with its associated sentiment.</a>
 
 ![alt text](/Image/blog1.png)
 ![alt text](/Image/blog3.png)
@@ -32,23 +31,23 @@ Taste Bots uses Natural Language Processing techniques on the Restaurnt reviews 
 
 
 ### Getting the data
-The dataset used was <a href="https://www.kaggle.com/himanshupoddar/zomato-bangalore-restaurants">Zomato Bangalore Restaurants</a> .
-Our main interest in the dataset were the  name,review_list and rating.
+The dataset used is <a href="https://www.kaggle.com/himanshupoddar/zomato-bangalore-restaurants">Zomato Bangalore Restaurants</a> .
+Columns name,review_list and rating is used for the project.
 
 ### Preprocessing
 **1.Data Cleaning**
-1. From the dataset few restaurant which had sufficient reviews were picked .
-2. The columns name and review_list were selected .
-3. The review from review list were cleaned using regex and other techniques .
-4. Finally the cleaned dataset was saved to <a name='rest_excel' href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/Restaurant_Review.xlsx">Restaurant Review</a> excel file .
+1. From the dataset few restaurants which has sufficient reviews are picked .
+2. The columns name and review_list are selected .
+3. The reviews from review list are cleaned using regex and other techniques .
+4. Finally the cleaned dataset is saved to <a name='rest_excel' href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/Restaurant_Review.xlsx">Restaurant Review</a> excel file .
 
 
 **2. Symspell**
 Spelling error is omnipresent in reviews . So before further working in reviews it is important to first mitigate the mispellings as much as possible .
-To correct spellings a library called <a href="https://github.com/wolfgarbe/SymSpell">Symspell</a> is used. We have extended its functionality by including indian food and dish names in its dictionary so that it serves our purpose .
+To correct spellings a library called <a href="https://github.com/wolfgarbe/SymSpell">Symspell</a> is used. Names of indian foods and dishes are appended in its dictionary so that it serves the purpose of the project.
 
 **3.Lemmatization**
-Lemmatization involves resolving words to their dictionary form. In fact, a lemma of a word is its dictionary or canonical form. So words like loved, loving etc. will have thier lemmatized form as love.
+Lemmatization involves resolving words to their dictionary form. In fact, a lemma of a word is its dictionary or canonical form. So words like loved, loving etc. will have thier lemmatized form as love. The reviews are lemmatized using NLTK WordNet Lemmatizer.
 
 [The Restaurant Review excel](#rest_excel) contains the output after each review of restaurant is sanitized by passed it through symspell followed by lemmatization function. 
 

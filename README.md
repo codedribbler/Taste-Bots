@@ -57,6 +57,7 @@ Lemmatization involves resolving words to their dictionary form. In fact, a lemm
 In a restaurant there can be features that customers mention in reviews . For example , suppose a restaurant serves scrumptious biryani and people really like it . So this would reflect in their reviews . So some reviews would be like -:
 
 1) They have one of the best chicken biryanis in bangaluru.
+
 2) Loved the Biryani.
 
 and similarly if people would find thing like service, ambience , pizzas etc good or bad they would have their opinions on those .

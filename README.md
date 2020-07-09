@@ -136,7 +136,8 @@ a. <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent Di
 b. <a href="https://en.wikipedia.org/wiki/Non-negative_matrix_factorization">Non-negative matrix factorization(NMF)</a> . It can be done using <a href="https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.NMF.html">sklearns NMF</a> 
 
 NMF gave more interpretable results and separable topics.
---Photo of topcs
+
+![alt text](/Image/topics.png)
 
 The topics can be categorized as -:
 a. Biryani/order
@@ -149,9 +150,10 @@ Each review will have the topic distribution which will indicate how much the re
 
 For a restaurant the topic distribution of its reviews is averaged . This results in a vector which indicates the topic distribution of the restaurants .
 
-These topic distribution vectors are leveraged to create recommendation system . The recommendation system cuurently can do the following things -:
+These topic distribution vectors are used to create recommendation system . The recommendation system cuurently can do the following things -:
 
 1) Can give recommendation for restaurants known for **biryani, ambience or service** . For biryani the restaurants vector are sorted in descending order based on biryani score . Higher score restaurant will be recommended more . Similar process is followed fo ambience and service.
+
 
 2) Can give recommendation of **similar restaurants** based on the selected restaurant . For doing this, cosine similarity of the restaurant vectors is calculated with the selected restaurants vector and the scores are sorted in descending order . Higher similarity scores will be recommended more .
 

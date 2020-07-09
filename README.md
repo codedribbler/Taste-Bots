@@ -54,16 +54,25 @@ Lemmatization involves resolving words to their dictionary form. In fact, a lemm
 
 ### Learning most talked about features of a Restaurant and their sentiments
 
-One of the objecive of the project is to highlight the most noticed feature of a restaurant .
-Explain by example ...........
+In a restaurant there can be features that customers mention in reviews . For example , suppose a restaurant serves scrumptious biryani and people really like it . So this would reflect in their reviews . So some reviews would be like -:
+
+1) They have one of the best chicken biryanis in bangaluru.
+2) Loved the Biryani.
+
+and similarly if people would find thing like service, ambience , pizzas etc good or bad they would have their opinions on those .
+
+One of the objective of the project is to draw out the features as well as thier opinions from the reviews and create a dashboard which will highlight the key things people are talking about a restaurant . This can have following utlity -:
+
+1) **The owners of the Restaurant** can identify areas of improvement so that they can overcome the gaps and the areas which are doing well so that they canmarket them as their highlights in different channels.
+
+2) **The customers** who very much likes to scrutinize the reviews of a restaurant before visiting, they will have a much more detailed analysis at their disposal.
 
 
+The dataset [The Restaurant Review excel](#rest_excel) consists of different restaurants and reviews which were cleaned in preprocessing steps . For each restaurant, reviews are picked and following tasks are performed on them -:
 
-So in the file [The Restaurant Review excel](#rest_excel) we have data consisting of different restaurants and thier reviews . So for each restaurant, reviews would be picked and following tasks would be performed on them -:
+**1. Splitting the reviews in sentences** - The reviews are divided into sentences. This can just be done by splitting the reviews based on punctuations('.',','etc.) but punctuation mistakes are quiet common in reviews, so a library <a href="https://github.com/notAI-tech/deepsegment">DeepSegment</a> is used . DeepSegment has nice performance in Sentence segmentation or Sentence boundary Detection and it outperforms both Spacy and NLTK in this task .
 
-**1. Splitting the reviews in sentences** - The reviews will be divided into sentences. This can just be done by splitting the reviews based on punctuations('.',','etc.) but punctuation mistakes are quiet common in reviews, so a library <a href="https://github.com/notAI-tech/deepsegment">DeepSegment</a> is used . DeepSegment has nice performance in Sentence segmentation or Sentence boundary Detection and it outperforms both Spacy and NLTK in this task .
-
-**2. Feature Extraction** - Spacy is used for Feature Extraction . After a review is segmented, each sentence is parsed with spacy and using noun_chunks functionality of spacy the features are extracted, then if noun_chunks contains stop words like the,a etc. and this cycle goes for all the sentence of the review . In this way features mentioned in a particular review are collected . Then using a counter occurances of the features in the list would be counted . Features which are less than 0.05 times number of reviews will be dropped. In this way only frequently mentioned features are considered.
+**2. Feature Extraction** - Spacy is used for Feature Extraction . After a review is segmented, each sentence is parsed with spacy and using noun_chunks functionality of spacy the features are extracted, then if noun_chunks contains stop words like the,a etc. they are removed and this cycle goes for all the sentence of the review . In this way features mentioned in a particular review are collected .This is repeated for all the reviews of a restaurant a collected in a list . Then using a counter occurances of the features in the list are counted . Features which are less than 0.05 times the number of reviews will be dropped. In this way only frequently mentioned features are considered.
 
 All the reviews of a particular restaurant goes through the same process and the final feature list consists of all the features mentioned in reviews and using this process features of all the restaurant is collected in a dictionary.
 

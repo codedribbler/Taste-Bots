@@ -72,7 +72,11 @@ The dataset [The Restaurant Review excel](#rest_excel) consists of different res
 
 **1. Splitting the reviews in sentences** - The reviews are divided into sentences. This can just be done by splitting the reviews based on punctuations('.',','etc.) but punctuation mistakes are quiet common in reviews, so a library <a href="https://github.com/notAI-tech/deepsegment">DeepSegment</a> is used . DeepSegment has nice performance in Sentence segmentation or Sentence boundary Detection and it outperforms both Spacy and NLTK in this task .
 
-**2. Feature Extraction** - Spacy is used for Feature Extraction . After a review is segmented, each sentence is parsed with spacy and using noun_chunks functionality of spacy the features are extracted, then if noun_chunks contains stop words like the,a etc. they are removed and this cycle goes for all the sentence of the review . In this way features mentioned in a particular review are collected .This is repeated for all the reviews of a restaurant a collected in a list . Then using a counter occurances of the features in the list are counted . Features which are less than 0.05 times the number of reviews will be dropped. In this way only frequently mentioned features are considered.
+**2. Feature Extraction** - Spacy is used for Feature Extraction . After a review is segmented, each sentence is parsed with spacy and using noun_chunks functionality of spacy the features are extracted, then if noun_chunks contains stop words like the,a etc. they are removed, this process goes for all the sentence of the review .
+![alt text](/Image/chunk.png)
+
+
+In this way features mentioned in a particular review are collected .This is repeated for all the reviews of a restaurant a collected in a list . Then using a counter occurances of the features in the list are counted . Features which are less than 0.05 times the number of reviews will be dropped. In this way only frequently mentioned features are considered.
 
 All the reviews of a particular restaurant goes through the same process and the final feature list consists of all the features mentioned in reviews and using this process features of all the restaurant is collected in a dictionary.
 

@@ -87,6 +87,7 @@ All the reviews of a particular restaurant goes through the same process and the
 
 **4. Extracting Sentiments and Sentiment Score** - To find setiment of features, reviews of a restaurant will be iterated to find if the contain the feature mentioned corresponding to that restaurant in feature dictionary. If the feature is located in the review, using spacy dependency parsing, adjective which describes the feature is be searched around the feature. 
 
+
 ![alt text](/Image/dep1.png)
 
 So a dictionary is created with features as its key and the adjective as its values .
@@ -94,8 +95,11 @@ So a dictionary is created with features as its key and the adjective as its val
 
 ![alt text](/Image/adj.png)
 
-After the dictionary is created, the values of the dictionary i.e the adjectives are converted into sentiment score using AFINN .  The <a href="https://pypi.org/project/afinn/">AFINN</a> lexicon is perhaps one of the simplest and most popular lexicons that
-can be used extensively for sentiment analysis.
+After the dictionary is created, the values of the dictionary i.e the adjectives are converted into sentiment score using AFINN . The <a href="https://pypi.org/project/afinn/">AFINN</a> lexicon is perhaps one of the simplest and most popular lexicons that
+can be used extensively for sentiment analysis. In this way sentiment distribution of features are created .
+
+
+![alt text](/Image/sent_dist.png)
 
 This is done for all the restaurant and the final sentiments are saved in <a href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/sentiment_matrix.xlsx">Setiment Dataset</a> and this dataset is used to create [UI](#top1) which provide dashboard for restaurants.
 

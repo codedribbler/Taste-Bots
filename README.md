@@ -5,9 +5,9 @@ Customer reviews are a critical success metric for a lot of businesses espically
 
 The business team of a restaurant uses the reviews to gauge performance and potential and on the other side of the table the customers depend on the reviews, from deciding whether to visit a restaurant to what to expect .
 
-There are a lot of amazing platforms which cater to this need Zomato , Yelp ,Google etc. naming a few, which make it very easy for people to read and post reviews . Thus there are huge banks of reviews . 
+There are a lot of amazing platforms which cater to this need such as Zomato , Yelp ,Google etc. naming a few, which make it very easy for people to read and post reviews . Thus there are huge banks of reviews . 
 
-But with heaps of reviews available it is impossible for people to read all the reviews. This is where Taste Bots comes into the picture.Taste Bots uses Natural Language Processing techniques on the Restaurnt reviews and makes sense of them . 
+But with heaps of reviews available, it is impossible for people to read all the reviews. This is where Taste Bots comes into the picture.Taste Bots uses Natural Language Processing techniques on the Restaurnt reviews and makes sense of them . 
 
 The solutions Taste Bots provide are -:
 
@@ -36,8 +36,8 @@ Columns name,review_list and rating is used for the project.
 
 ### Preprocessing
 **1.Data Cleaning**
-1. From the dataset few restaurants which has sufficient reviews are picked .
-2. The columns name and review_list are selected .
+1. From the dataset few restaurants which have sufficient reviews are picked .
+2. The column name and review_list are selected .
 3. The reviews from review list are cleaned using regex and other techniques .
 4. Finally the cleaned dataset is saved to <a name='rest_excel' href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/Restaurant_Review.xlsx">Restaurant Review</a> excel file .
 
@@ -47,7 +47,7 @@ Spelling error is omnipresent in reviews . So before further working in reviews 
 To correct spellings a library called <a href="https://github.com/wolfgarbe/SymSpell">Symspell</a> is used. Names of indian foods and dishes are appended in its dictionary so that it serves the purpose of the project.
 
 **3.Lemmatization**
-Lemmatization involves resolving words to their dictionary form. In fact, a lemma of a word is its dictionary or canonical form. So words like loved, loving etc. will have thier lemmatized form as love. The reviews are lemmatized using NLTK WordNet Lemmatizer.
+Lemmatization involves resolving words to their dictionary form. In fact, a lemma of a word is its dictionary or canonical form. So words like loved, loving etc. will have their lemmatized form as love. The reviews are lemmatized using NLTK WordNet Lemmatizer.
 
 [The Restaurant Review excel](#rest_excel) contains the output after each review of restaurant is sanitized by passed it through symspell followed by lemmatization function. 
 
@@ -60,61 +60,61 @@ In a restaurant there can be features that customers mention in reviews . For ex
 
 2) Loved the Biryani.
 
-and similarly if people would find thing like service, ambience , pizzas etc good or bad they would have their opinions on those .
+Similarly, if people would find thing such as service, ambience , pizzas etc good or bad, they would have their opinions on those .
 
-One of the objective of the project is to draw out the features as well as thier opinions from the reviews and create a dashboard which will highlight the key things people are talking about a restaurant . This can have following utlity -:
+One of the objectives of the project is to draw out the features as well as their opinions from the reviews and create a dashboard which will highlight the key things people are talking about a restaurant . This can have the following utlity -:
 
-1) **The owners of the Restaurant** can identify areas of improvement so that they can overcome the gaps and the areas which are doing well so that they canmarket them as their highlights in different channels.
+1) **The owners of the Restaurant** can identify areas of improvement so that they can overcome the gaps and the areas which are doing well so that they can market them as their highlights in different channels.
 
-2) **The customers** who very much likes to scrutinize the reviews of a restaurant before visiting, they will have a much more detailed analysis at their disposal.
+2) **The customers** who very much like to scrutinize the reviews of a restaurant before visiting will have a much more detailed analysis at their disposal.
 
 
 The dataset [The Restaurant Review excel](#rest_excel) consists of different restaurants and reviews which were cleaned in preprocessing steps . For each restaurant, reviews are picked and following tasks are performed on them -:
 
-**1. Splitting the reviews in sentences** - The reviews are divided into sentences. This can just be done by splitting the reviews based on punctuations('.',','etc.) but punctuation mistakes are quiet common in reviews, so a library <a href="https://github.com/notAI-tech/deepsegment">DeepSegment</a> is used . DeepSegment has nice performance in Sentence segmentation or Sentence boundary Detection and it outperforms both Spacy and NLTK in this task .
+**1. Splitting the reviews in sentences** - The reviews are divided into sentences. This can just be done by splitting the reviews based on punctuations('.',','etc.), but punctuation mistakes are quiet common in reviews, so a library <a href="https://github.com/notAI-tech/deepsegment">DeepSegment</a> is used . DeepSegment has nice performance in Sentence segmentation or Sentence boundary Detection and it outperforms both Spacy and NLTK in this task .
 
-**2. Feature Extraction** - Spacy is used for Feature Extraction . After a review is segmented, each sentence is parsed with spacy and using noun_chunks functionality of spacy the features are extracted, then if noun_chunks contains stop words like the,a etc. they are removed, this process goes for all the sentence of the review .
+**2. Feature Extraction** - Spacy is used for Feature Extraction . After a review is segmented, each sentence is parsed with spacy and using noun_chunks functionality of spacy the features are extracted and if noun_chunks contain stop words such as "the","a" etc, they are are removed and this process goes for all the sentences of the review .
 ![alt text](/Image/chunk.png)
 
 
 
 
 
-In this way features mentioned in a particular review are collected .This is repeated for all the reviews of a restaurant a collected in a list .Then using a counter occurances of the features in the list are counted . Features which are less than 0.05 times the number of reviews will be dropped. In this way only frequently mentioned features are considered.
+In this way, features mentioned in a particular review are collected .This is repeated for all the reviews of a restaurant and collected in a list .Then using a counter ,occurences of the features in the list are counted . Features which are less than 0.05 times the number of reviews will be dropped. In this way, only frequently mentioned features are considered.
 ![alt text](/Image/count_chunk.png)
 
-All the reviews of a particular restaurant goes through the same process and the final feature list consists of all the features mentioned in reviews and using this process features of all the restaurant is collected in a dictionary.
+All the reviews of a particular restaurant go through the same process and the final feature list consists of all the features mentioned in the review and using this process features of all the restaurant are collected in a dictionary.
 
 
-**4. Extracting Sentiments and Sentiment Score** - To find setiment of features, reviews of a restaurant will be iterated to find if the contain the feature mentioned corresponding to that restaurant in feature dictionary. If the feature is located in the review, using spacy dependency parsing, adjective which describes the feature is be searched around the feature. 
+**4. Extracting Sentiments and Sentiment Score** - To find sentiment of features, reviews of a restaurant will be iterated to find if they contain the features mentioned corresponding to that restaurant in the feature dictionary. If the feature is located in the review then using spacy dependency parsing the adjective which describes the feature is searched around the feature. 
 
 
 ![alt text](/Image/dep1.png)
 
-So a dictionary is created with features as its key and the adjective as its values .
+So a dictionary is created with features as its keys and the adjectives as its values .
 
 
 ![alt text](/Image/adj.png)
 
 After the dictionary is created, the values of the dictionary i.e the adjectives are converted into sentiment score using AFINN . The <a href="https://pypi.org/project/afinn/">AFINN</a> lexicon is perhaps one of the simplest and most popular lexicons that
-can be used extensively for sentiment analysis. In this way sentiment distribution of features are created .
+can be used extensively for sentiment analysis. In this way, sentiment distribution of features are created .
 
 
 ![alt text](/Image/sent_dist.png)
 
-This is done for all the restaurant and the final sentiments are saved in <a href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/sentiment_matrix.xlsx">Setiment Dataset</a> and this dataset is used to create [UI](#top1) which provide dashboard for restaurants.
+This is done for all the restaurant and the final sentiments are saved in <a href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/sentiment_matrix.xlsx">Setiment Dataset</a> and this dataset is used to create [UI](#top1) which provides dashboard for restaurants.
 
 
 
 ### Topic Modelling
 
-<a href="https://en.wikipedia.org/wiki/Topic_model#:~:text=In%20machine%20learning%20and%20natural,structures%20in%20a%20text%20body.">Topic Modeling</a> is the process of identifying topics in a set of documents . In case of reviews topic modelling can be a handy utility which can find out around what topics the reviews are written . This can be leveraged to form recommended system which can -:
+<a href="https://en.wikipedia.org/wiki/Topic_model#:~:text=In%20machine%20learning%20and%20natural,structures%20in%20a%20text%20body.">Topic Modeling</a> is the process of identifying topics in a set of documents . In case of reviews, topic modelling can be a handy utility which can find out the topics around which topics the reviews are written . This can be leveraged to form recommended system which can -:
 
 a. [Give recommendation of Restaurants based on the Topics](#top2)
 
-b. [Give recommendation of restaurants similar ro a particular restaurant](#top2) 
+b. [Give recommendation of restaurants similar to a particular restaurant](#top2) 
 
-There are other utilities as well which are not part of the project, like -:
+There are other utilities as well which are not part of the project such as -:
 
 a. Visually show to a restaurant owner what topics their positive and negative
 reviews reside in. This makes it clear if a restaurant needs to improve its service
@@ -128,7 +128,7 @@ calculated mean.
 The process for topic modelling is as follows -:
 
 
-**1. Get the data** - Same <a href="https://www.kaggle.com/himanshupoddar/zomato-bangalore-restaurants">Zomato Bangalore Restaurants</a> dataset is required . Fileter the reviews whose ratings are greater than 3 . Then clean the reviews using same process as in the previous section.
+**1. Get the data** - Same <a href="https://www.kaggle.com/himanshupoddar/zomato-bangalore-restaurants">Zomato Bangalore Restaurants</a> dataset is required . Filter the reviews whose ratings are greater than 3 . Then clean the reviews using same process as in the previous section.
 
 **2. Tokenization** - Tokenization is a way of separating a piece of text into smaller units called tokens. Here, tokens can be either words, characters, or subwords. Here sentences are tokenized into words . Tokenization will create a list of words for each review . This way a 2d matrix is created where the row are the reviews and columns are the tokezed words . 
 

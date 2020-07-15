@@ -110,7 +110,9 @@ This is done for all the restaurant and the final sentiments are saved in <a hre
 
 <a href="https://en.wikipedia.org/wiki/Topic_model#:~:text=In%20machine%20learning%20and%20natural,structures%20in%20a%20text%20body.">Topic Modeling</a> is the process of identifying topics in a set of documents . In case of reviews, topic modelling can be a handy utility which can find out the topics around which topics the reviews are written . This can be leveraged to form recommended system which can -:
 
-a. [Give recommendation of Restaurants based on the Topics](#top2)
+a. Give recommendation of Restaurants based on the Topics
+
+![alt text](/Image/recommend.png)
 
 b. [Give recommendation of restaurants similar to a particular restaurant](#top2) 
 

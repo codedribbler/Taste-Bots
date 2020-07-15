@@ -5,7 +5,7 @@ Customer reviews are a critical success metric for a lot of businesses espically
 
 There are a lot of amazing platforms which cater to this need such as Zomato , Yelp ,Google etc. to name a few, which make it very easy for people to read and post reviews . Thus there are huge bank of reviews . 
 
-But with heaps of reviews available, it is impossible for people to read all the reviews. This is where Taste Bots comes into the picture.Taste Bots uses Natural Language Processing techniques on the Restaurnt reviews and makes sense of them . 
+But with heaps of reviews available, it is impossible for customers to read so many reviews and then decide which place to choose . Even for the business people reading the reviews manually and analyze is a drudgery.  This is when Taste Bots comes to their rescue. Taste  Bots uses Natural Language Processing techniques on the Restaurnt reviews and makes sense of them. 
 
 The solutions Taste Bots provide are -:
 

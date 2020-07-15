@@ -69,7 +69,7 @@ One of the objectives of the project is to draw out the features as well as thei
 2) **The customers** who very much like to scrutinize the reviews of a restaurant before visiting will have a much more detailed analysis at their disposal.
 
 
-The dataset [The Restaurant Review excel](#rest_excel) consists of different restaurants and reviews which were cleaned in preprocessing steps . For each restaurant, reviews are picked and following tasks are performed on them -:
+The dataset <a href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/Restaurant_Review.xlsx">The Restaurant Review excel</a> consists of different restaurants and reviews which were cleaned in preprocessing steps . For each restaurant, reviews are picked and following tasks are performed on them -:
 
 **1. Splitting the reviews in sentences** - The reviews are divided into sentences. This can just be done by splitting the reviews based on punctuations('.',','etc.), but punctuation mistakes are quiet common in reviews, so a library <a href="https://github.com/notAI-tech/deepsegment">DeepSegment</a> is used . DeepSegment has nice performance in Sentence segmentation or Sentence boundary Detection and it outperforms both Spacy and NLTK in this task .
 
@@ -134,6 +134,7 @@ The process for topic modelling is as follows -:
 
 **3. Topic Modelling** - Two very popular approaches for topic modelling is used 
 a. <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent Dirichlet allocation(LDA)</a> . <a href="https://radimrehurek.com/gensim/">Gensim</a> library ca be leveraged for doing LDA .  
+
 b. <a href="https://en.wikipedia.org/wiki/Non-negative_matrix_factorization">Non-negative matrix factorization(NMF)</a> . It can be done using <a href="https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.NMF.html">sklearns NMF</a> 
 
 NMF gave more interpretable results and separable topics.

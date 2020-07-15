@@ -14,7 +14,7 @@ The solutions Taste Bots provide are -:
 ![alt text](/Image/blog1.png)
 ![alt text](/Image/blog3.png)
 
-2) <a name="top2">Give reccomendations based on the reviews.</a>
+2) <a name="top2">Gives reccomendation based on the reviews.</a>
 
 ![alt text](/Image/blog2.png)
 

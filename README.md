@@ -5,7 +5,7 @@ Customer reviews are a critical success metric for a lot of businesses espically
 
 The business team of a restaurant uses the reviews to gauge performance and potential and on the other side of the table the customers depend on the reviews, from deciding whether to visit a restaurant to what to expect .
 
-There are a lot of amazing platforms which cater to this need such as Zomato , Yelp ,Google etc. naming a few, which make it very easy for people to read and post reviews . Thus there are huge banks of reviews . 
+There are a lot of amazing platforms which cater to this need such as Zomato , Yelp ,Google etc. to name a few, which make it very easy for people to read and post reviews . Thus there are huge bank of reviews . 
 
 But with heaps of reviews available, it is impossible for people to read all the reviews. This is where Taste Bots comes into the picture.Taste Bots uses Natural Language Processing techniques on the Restaurnt reviews and makes sense of them . 
 
@@ -35,7 +35,7 @@ The dataset used is <a href="https://www.kaggle.com/himanshupoddar/zomato-bangal
 Columns name,review_list and rating is used for the project.
 
 ### Preprocessing
-**1.Data Cleaning**
+**1. Data Cleaning**
 1. From the dataset few restaurants which have sufficient reviews are picked .
 2. The column name and review_list are selected .
 3. The reviews from review list are cleaned using regex and other techniques .
@@ -46,10 +46,10 @@ Columns name,review_list and rating is used for the project.
 Spelling error is omnipresent in reviews . So before further working in reviews it is important to first mitigate the mispellings as much as possible .
 To correct spellings a library called <a href="https://github.com/wolfgarbe/SymSpell">Symspell</a> is used. Names of indian foods and dishes are appended in its dictionary so that it serves the purpose of the project.
 
-**3.Lemmatization**
+**3. Lemmatization**
 Lemmatization involves resolving words to their dictionary form. In fact, a lemma of a word is its dictionary or canonical form. So words like loved, loving etc. will have their lemmatized form as love. The reviews are lemmatized using NLTK WordNet Lemmatizer.
 
-[The Restaurant Review excel](#rest_excel) contains the output after each review of restaurant is sanitized by passed it through symspell followed by lemmatization function. 
+<a href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/Restaurant_Review.xlsx">The Restaurant Review excel</a> contains the output after each review of restaurant is sanitized by passing it through symspell followed by lemmatization function. 
 
 
 ### Learning most talked about features of a Restaurant and their sentiments

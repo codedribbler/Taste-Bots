@@ -1,9 +1,7 @@
 
 ![alt text](/Image/alfredo.jpg)
 
-Customer reviews are a critical success metric for a lot of businesses espically in restaurant business where it has the power to drive its fate . 
-
-The business team of a restaurant uses the reviews to gauge performance and potential and on the other side of the table the customers depend on the reviews, from deciding whether to visit a restaurant to what to expect .
+Customer reviews are a critical success metric for a lot of businesses espically in restaurant business where it has the power to drive its fate . The business team of a restaurant uses the reviews to gauge performance and potential. The customers depend on the reviews, from deciding whether to visit a restaurant to what to expect .
 
 There are a lot of amazing platforms which cater to this need such as Zomato , Yelp ,Google etc. to name a few, which make it very easy for people to read and post reviews . Thus there are huge bank of reviews . 
 
@@ -114,7 +112,8 @@ a. Give recommendation of Restaurants based on the Topics
 
 ![alt text](/Image/recommend.png)
 
-b. [Give recommendation of restaurants similar to a particular restaurant](#top2) 
+b. Give recommendation of restaurants similar to a particular restaurant
+
 
 There are other utilities as well which are not part of the project such as -:
 

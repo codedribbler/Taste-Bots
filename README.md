@@ -1,11 +1,10 @@
-
 ![alt text](/Image/alfredo.jpg)
 
-Customer reviews are a critical success metric for a lot of businesses espically in restaurant business where it has the power to drive its fate . The business team of a restaurant uses the reviews to gauge performance and potential. The customers depend on the reviews, from deciding whether to visit a restaurant to what to expect .
+Customer reviews are a critical success metric for a lot of businesses especially in the restaurant business where it has the power to drive its fate. The business team of a restaurant uses reviews to gauge performance and potential. The customers depend on the reviews, from deciding whether to visit a restaurant to what to expect.
 
-There are a lot of amazing platforms which cater to this need such as Zomato , Yelp ,Google etc. to name a few, which make it very easy for people to read and post reviews . Thus there are huge bank of reviews . 
+There are a lot of amazing platforms which cater to this need such as Zomato, Yelp, Google etc. to name a few, which make it very easy for people to read and post reviews. Thus there are a huge bank of reviews. 
 
-But with heaps of reviews available, it is impossible for customers to read so many reviews and then decide which place to choose . Even for the business people reading the reviews manually and analyze is a drudgery.  This is when Taste Bots comes to their rescue. Taste  Bots uses Natural Language Processing techniques on the Restaurnt reviews and makes sense of them. 
+But with heaps of reviews available, it is impossible for customers to read so many reviews and then decide which place to choose. Even for the business people reading the reviews manually and analyze is a drudgery.  This is when Taste Bots comes to their rescue. Taste  Bots uses Natural Language Processing techniques on the Restaurant reviews and makes sense of them. 
 
 The solutions Taste Bots provide are -:
 
@@ -20,7 +19,7 @@ The solutions Taste Bots provide are -:
 
 ### The process involves -:
 1. Getting the data
-2. Preprocessing the date which involves -:
+2. Preprocessing the data which involves -:
       - Data cleaning.
       - Using symspell to correct spelling mistakes.
       - Lemmatization
@@ -34,27 +33,27 @@ Columns name,review_list and rating is used for the project.
 
 ### Preprocessing
 **1. Data Cleaning**
-1. From the dataset few restaurants which have sufficient reviews are picked .
-2. The column name and review_list are selected .
-3. The reviews from review list are cleaned using regex and other techniques .
+1. From the dataset few restaurants which have sufficient reviews are picked.
+2. The column name and review_list are selected.
+3. The reviews from the review list are cleaned using regex and other techniques.
 4. Finally the cleaned dataset is saved to <a name='rest_excel' href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/Restaurant_Review.xlsx">Restaurant Review</a> excel file .
 
 
 **2. Symspell**
-Spelling error is omnipresent in reviews . So before further working in reviews it is important to first mitigate the mispellings as much as possible .
-To correct spellings a library called <a href="https://github.com/wolfgarbe/SymSpell">Symspell</a> is used. Names of indian foods and dishes are appended in its dictionary so that it serves the purpose of the project.
+Spelling errors are omnipresent in reviews. So before further working in reviews, it is important to first mitigate the misspellings as much as possible.
+To correct spellings a library called <a href="https://github.com/wolfgarbe/SymSpell">Symspell</a> is used. Names of Indian foods and dishes are appended in its dictionary so that it serves the purpose of the project.
 
 **3. Lemmatization**
 Lemmatization involves resolving words to their dictionary form. In fact, a lemma of a word is its dictionary or canonical form. So words like loved, loving etc. will have their lemmatized form as love. The reviews are lemmatized using NLTK WordNet Lemmatizer.
 
-<a href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/Restaurant_Review.xlsx">The Restaurant Review excel</a> contains the output after each review of restaurant is sanitized by passing it through symspell followed by lemmatization function. 
+<a href="https://github.com/codedribbler/Taste-Bots/blob/master/Code/Restaurant_Review.xlsx">The Restaurant Review excel</a> contains the output after each review of the restaurant is sanitized by passing it through symspell followed by lemmatization function. 
 
 
 ### Learning most talked about features of a Restaurant and their sentiments
 
-In a restaurant there can be features that customers mention in reviews . For example , suppose a restaurant serves scrumptious biryani and people really like it . So this would reflect in their reviews . So some reviews would be like -:
+In a restaurant, there can be features that customers mention in reviews. For example, suppose a restaurant serves scrumptious biryani and people really like it. So this would reflect in their reviews. So some reviews would be like -:
 
-1) They have one of the best chicken biryanis in bangaluru.
+1) They have one of the best chicken biryanis in Bangalore.
 
 2) Loved the Biryani.
 
@@ -159,9 +158,6 @@ These topic distribution vectors are used to create recommendation system . The 
 
 
 2) Can give recommendation of **similar restaurants** based on the selected restaurant . For doing this, cosine similarity of the restaurant vectors is calculated with the selected restaurants vector and the scores are sorted in descending order . Higher similarity scores will be recommended more .
-
-
-
 
 
 

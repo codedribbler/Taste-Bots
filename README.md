@@ -135,6 +135,7 @@ The process for topic modelling is as follows -:
 **2. Tokenization** - Tokenization is a way of separating a piece of text into smaller units called tokens. Here, tokens can be either words, characters, or subwords. Here sentences are tokenized into words . Tokenization will create a list of words for each review . This way a 2d matrix is created where the row are the reviews and columns are the tokezed words . 
 
 **3. Topic Modelling** - Two very popular approaches for topic modelling is used 
+
 a. <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent Dirichlet allocation(LDA)</a> . <a href="https://radimrehurek.com/gensim/">Gensim</a> library ca be leveraged for doing LDA .  
 
 b. <a href="https://en.wikipedia.org/wiki/Non-negative_matrix_factorization">Non-negative matrix factorization(NMF)</a> . It can be done using <a href="https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.NMF.html">sklearns NMF</a> 

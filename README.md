@@ -1,7 +1,12 @@
 ![alt text](/Image/alfredo.jpg)
 
 
+### Video link : [https://vimeo.com/493006952](https://vimeo.com/493006952)
 
+[Demo](https://taste-bot.herokuapp.com/) of the taste-bots web app. 
+### Note
+Data for all restaurants could not be gathered properly .  For Barbeque Nation data was taken and transformed, so detailed review analysis would be there for it. Other restaurants for which data could be gathered were Bologna, Chez Mariannick, Toscano, Mani's Dum Biryani
+ 
 
 Customer reviews are a critical success metric for a lot of businesses especially in the restaurant business where it has the power to drive its fate. The business team of a restaurant uses reviews to gauge performance and potential. The customers depend on the reviews, from deciding whether to visit a restaurant to what to expect.
 
@@ -166,5 +171,5 @@ These topic distribution vectors are used to create recommendation system . The 
 
 
 
-### Video link : [https://vimeo.com/493006952](https://vimeo.com/493006952)
+
 
